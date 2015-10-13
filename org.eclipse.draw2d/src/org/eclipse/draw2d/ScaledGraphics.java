@@ -906,9 +906,9 @@ public class ScaledGraphics extends Graphics {
 	private Rectangle zoomFillRect(int x, int y, int w, int h) {
 		tempRECT.x = (int) (Math.floor((x * zoom + fractionalX)));
 		tempRECT.y = (int) (Math.floor((y * zoom + fractionalY)));
-		tempRECT.width = (int) (Math.floor(((x + w - 1) * zoom + fractionalX)))
+		tempRECT.width = (int) (Math.floor(((x + w) * zoom + fractionalX)))
 				- tempRECT.x + 1;
-		tempRECT.height = (int) (Math.floor(((y + h - 1) * zoom + fractionalY)))
+		tempRECT.height = (int) (Math.floor(((y + h) * zoom + fractionalY)))
 				- tempRECT.y + 1;
 		return tempRECT;
 	}
